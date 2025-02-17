@@ -1,10 +1,10 @@
 
-include(FetchContent)
-FetchContent_Declare(
-    gtest
-    URL https://github.com/google/googletest/archive/refs/tags/v1.15.2.zip
-)
-FetchContent_MakeAvailable(gtest)
+find_package(GTest REQUIRED)
+if(GTest_FOUND)
+    message(STATUS "=> Found gtest")
+else()
+    message(STATUS "*** Didn't find gtest")
+endif()
 
 enable_testing()
 
