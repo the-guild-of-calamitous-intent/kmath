@@ -11,7 +11,7 @@ Simple matrix library for embedded systems.
 
 - `TYPE`: set to `float` or `double` in the `CMakeLists.txt` file
 - `array_t`: the matrix is a single array of size = rows * columns
-- `keybalue_t`: when a new matrix is needed or a temporary return value needed, this will return an `array_t` of the correct size. The goal is to minimize `malloc()`/`free()` calls
+- `keyvalue_t`: when a new matrix is needed or a temporary return value needed, this will return an `array_t` of the correct size. The goal is to minimize `malloc()`/`free()` calls
 - `matrix_t`: this is the main `struct` that can handle all common matrix operations. 
 - `get_matrix_err()`: like `errnum()` in C, global function that returns an error number
 - `get_matrix_err_string()`: returns a `std::string` for printing the error
